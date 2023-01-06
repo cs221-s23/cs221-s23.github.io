@@ -18,12 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Course Name
+title: CS 221 - Spring 2023
 author: Instructor Name
 email: your-email@example.com
-baseurl: /site  # the subpath of your site, e.g. /blog
+baseurl: "" 
 favicon: favicon.ico  # Icon displayed in the tab
 due_date_format: "%a, %b %-d, %Y at %I:%M %p" # Thu, Jan 27, 2022 at 11:59 PM
+future: true
 
 # Build settings
 remote_theme: jekyll/minima@7a326eb
