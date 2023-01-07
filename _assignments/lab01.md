@@ -1,9 +1,9 @@
 ---
 layout: assignment
-due: 2022-08-29 23:59:59 -0800
+due: 2023-01-26 23:59:59 -0800
 permalink: assignments/lab01.html
 title: Lab01 - Environment Setup
-github_url: https://classroom.github.com/a/Kls4bqkw
+github_url: https://classroom.github.com/a/UlBdpqm1
 ---
 
 ## Step 1: Choose a terminal app for your laptop
@@ -56,7 +56,7 @@ github_url: https://classroom.github.com/a/Kls4bqkw
 1. If you already have files named `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) and you know the passphrase to use your private key, then skip to the next step. 
 1. If the `~/.ssh` directory is empty then type
     ```sh
-    your_name@laptop_name:~/.ssh $ ssh-keygen -t ed25519 -C "your_email@example.com"
+    your_name@laptop_name:~/.ssh $ ssh-keygen -t ed25519 -C "your_email@dons.usfca.edu"
     ```
 1. When the tool asks you to choose a filename, just hit return to take the default filename
 1. When the tool asks you to choose a passphrase for your private key, use a passphrase you will remember
