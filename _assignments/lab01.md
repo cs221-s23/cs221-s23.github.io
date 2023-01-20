@@ -84,7 +84,8 @@ github_url: https://classroom.github.com/a/UlBdpqm1
       AddKeysToAgent yes
       UseKeychain yes
       IdentityFile ~/.ssh/id_ed25519
-    Host stargate.cs.usfca.edu
+    Host stargate
+      HostName stargate.cs.usfca.edu
       ForwardAgent yes
       User your_usf_login
       AddKeysToAgent yes
@@ -112,12 +113,12 @@ github_url: https://classroom.github.com/a/UlBdpqm1
 ## Step 6: Put your public key on stargate
 1. From your terminal app
     ```sh
-    your_name@laptop_name:~/.ssh $ ssh-copy-id your_usf_login@stargate.cs.usfca.edu
+    your_name@laptop_name:~/.ssh $ ssh-copy-id stargate
     ```
     When it asks for your password, use your USF student ID (CWID)
 1. Test your ssh access to stargate
     ```sh
-    your_name@laptop_name:~/.ssh $ ssh username@stargate.cs.usfca.edu
+    your_name@laptop_name:~/.ssh $ ssh stargate
     ...
     username@stargate:~ $ 
     ```
@@ -161,7 +162,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
 ## Step 8: ssh to stargate
 1. From your terminal app
     ```sh
-    your_name@laptop_name:~/.ssh $ ssh your_usf_login@stargate.cs.usfca.edu
+    your_name@laptop_name:~/.ssh $ ssh stargate
     your_usf_login@stargate:~ $ 
     ```
 1. Test ssh to `github.com`
@@ -186,7 +187,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
 ## Step 10: Finally, some code
 1. Clone the assignment repository ("repo") into your home directory
     ```sh
-    your_usf_login@vlab01:~ $ git clone git@github.com:/cs221-s22/lab01-yourgithubid
+    your_usf_login@vlab01:~ $ git clone git@github.com:/cs221-s23/lab01-yourgithubid
     your_usf_login@vlab01:~ cd lab01-yourgithubid
     ```
 1. Compile the program
