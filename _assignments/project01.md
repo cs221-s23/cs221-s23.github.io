@@ -1,9 +1,9 @@
 ---
 layout: assignment
-due: 2022-09-12 23:59:59 -0800
+due: 2023-02-14 23:59:59 -0800
 permalink: assignments/project01.html
 title: Project01 - Password Checker
-github_url: https://classroom.github.com/a/QxogbUAb
+github_url: https://classroom.github.com/a/crZG8L3a
 ---
 
 ## Background
@@ -44,19 +44,19 @@ Passwords are a fundamental part of computer security. In this assignment, we wi
 ## Example Output
 
 ```sh
-phpeterson@vlab00:project01 $ ./project01 10k foobar
+$ ./project01 10k foobar
 10k: match
 
-phpeterson@vlab00:project01 $ ./project01 10k foobaz
+$ ./project01 10k foobaz
 10k: no match
 
-phpeterson@vlab00:project01 $ ./project01 l33t y@nk33s
+$ ./project01 l33t y@nk33s
 l33t: match
 
-phpeterson@vlab00:project01 $ ./project01 plus1 yankees1
+$ ./project01 plus1 yankees1
 plus1: match
 
-phpeterson@vlab00:project01 $ ./project01 entropy "purple cow stapler mouse"
+$ ./project01 entropy "purple cow stapler mouse"
 bits of entropy: 140
 ```
 

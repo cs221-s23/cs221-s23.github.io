@@ -1,9 +1,9 @@
 ---
 layout: assignment
-due: 2022-09-20 23:59:59 -0800
+due: 2023-02-21 23:59:59 -0800
 permalink: assignments/lab03.html
 title: Lab03 - Files, error handling
-github_url: https://classroom.github.com/a/qiE0w-Re
+github_url: https://classroom.github.com/a/uYNNbcUN
 ---
 
 ## Background
@@ -26,22 +26,23 @@ In C, it's very important to be careful when allocating memory, copying data bet
 
 ## Example Output
 ```sh
-phpeterson@vlab20:lab03 $ ./lab03 lab03.csv
+$ ./lab03 lab03.csv
 usage: lab03 filename 'name qty' ['name qty']
 
-phpeterson@vlab20:lab03 $ ./lab03 lab03.csv 'apples 20' 'oranges 10'
-phpeterson@vlab20:lab03 $ cat lab03.csv
+$ ./lab03 lab03.csv 'apples 20' 'oranges 10'
+
+$ cat lab03.csv
 name,quantity
 apples,20
 oranges,10
 
-phpeterson@vlab20:lab03 $ ./lab03 lab03.csv 'apples 20' 'oranges asdf'
+$ ./lab03 lab03.csv 'apples 20' 'oranges asdf'
 not a number: asdf
 
-phpeterson@vlab20:lab03 $ ./lab03 lab03.csv "cinnamonapplessauce 10"
+$ ./lab03 lab03.csv "cinnamonapplessauce 10"
 string overflow: cinnamonapplessauce 10
 
-phpeterson@vlab20:lab03 $ ./lab03 /usr/bin/lab03.csv 'apples 20' 'oranges 10'
+$ ./lab03 /usr/bin/lab03.csv 'apples 20' 'oranges 10'
 failed to open: /usr/bin/lab03.csv
 ```
 

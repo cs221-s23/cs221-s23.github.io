@@ -1,9 +1,9 @@
 ---
 layout: assignment
-due: 2022-09-06 23:59:59 -0800
+due: 2023-02-07 23:59:59 -0800
 permalink: assignments/lab02.html
 title: Lab02 - Strings
-github_url: https://classroom.github.com/a/jtnErzsf
+github_url: https://classroom.github.com/a/zkJj7JYD
 ---
 ## Requirements
 1. You will develop the C code and a `Makefile` which builds one executable
@@ -12,7 +12,7 @@ called `lab02` (case sentitive) for the parts described below
 
 ## Given
 1. You must clone my [autograder repo](https://github.com/phpeterson-usf/autograder) 
-and the [test cases repo](https://github.com/cs221-0203-f22/tests) for this class 
+and the [test cases repo](https://github.com/cs221-s23/tests) for this class 
 into your home directory on the lab systems
 1. The `make` program is included on the lab systems so you do not have to 
 install it
@@ -24,6 +24,7 @@ Count the occurrences of a single character in a string. Example output:
 ```sh
 $ ./lab02 foobar o
 2
+
 $ ./lab02 foobar
 invalid arguments
 ```
@@ -33,6 +34,7 @@ Count the occurrences of an N-character string in another string. Example output
 ```sh
 $ ./lab02 abbabb bb
 2
+
 $ ./lab02 abbabb bc
 0
 ```
