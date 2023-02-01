@@ -25,7 +25,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
     1. At the password prompt, type your USF student ID (CWID)
     1. Your CWID will not be shown (in case someone was watching over your shoulder) but just type it followed by the Return key
     1. Be careful not to type the wrong student ID three times. If you do, your account will be locked until unlocked by the [CS Support team](mailto:support@cs.usfca.edu)
-1. You should see
+1. If this is the first time you are connecting to `stargate`, you will see the warning below. Answer with yes.
     ```
     The authenticity of host 'remote-host' can't be established...
     Are you sure you want to continue connecting? (yes/no) yes
@@ -53,6 +53,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
     your_name@laptop_name:~ $ cd ~/.ssh
     your_name@laptop_name:~/.ssh $ ls
     ```
+    `cd` changes the directory (folder) and `ls` shows the content (files in the folder).
 1. If you already have files named `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) and you know the passphrase to use your private key, then skip to the next step. 
 1. If the `~/.ssh` directory is empty then type
     ```sh
@@ -185,6 +186,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
     ```
 
 ## Step 10: Finally, some code
+1. Accept the GitHub assignment [here](https://classroom.github.com/a/UlBdpqm1) 
 1. Clone the assignment repository ("repo") into your home directory
     ```sh
     your_usf_login@vlab01:~ $ git clone git@github.com:/cs221-s23/lab01-yourgithubid
