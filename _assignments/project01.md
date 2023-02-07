@@ -30,13 +30,13 @@ In this assignment, we will implement [Dictionary Attack](https://en.wikipedia.o
     1. `sha256.h` and `sha256.c` which respectively declare and define the code to compute a SHA-256 hash digest
     1. `project01.c` which shows how to use the SHA-256 functions.
 1. Although there are a large number of l33t substitutions, we will use these common ones:
-    1. Change '0' to 'o'
-    1. Change '3' to 'e'
-    1. Change '!' to 'i'  
-    1. Change '@' to 'a'  
-    1. Change '#' to 'h'
-    1. Change '$' to 's'
-    1. Change '+' to 't'
+    1. Change 'o' to '0'
+    1. Change 'e' to '3'
+    1. Change 'i' to '!'
+    1. Change 'a' to '@'
+    1. Change 'h' to '#'
+    1. Change 's' to '$'
+    1. Change 't' to '+'
 1. The test case for plus1 is separate from the test case for l33t, so yankees1 should match yankees, but y@nk33s1 should not match yankees. 
 1. If you want to test some password hashes, there are many SHA-256 calculators online, including [this one](https://xorbin.com/tools/sha256-hash-calculator)
 
@@ -57,6 +57,9 @@ n!n3rs
 
 $ ./project01 ef60a458e0016857ade43406a7cfd256a904f8becd75c660b19ac72831f502d6
 niners1
+
+$ ./project01 c9e100f0214a368bc599534b9d25877699aba73adb3b8691f2021de9eddf96c9
+not found
 ```
 
 ## Rubric
