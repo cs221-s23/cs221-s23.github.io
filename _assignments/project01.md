@@ -64,4 +64,4 @@ niners1
     1. 20 pts: passes 10k-l33t tests
     1. 20 pts: passes 10k-plus1 tests
 2. And manually for style
-    1. 10 pts: readable coding style, no build products in repo
+    1. 10 pts: [readable coding style](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md), no build products in repo
