@@ -43,6 +43,18 @@ Passwords are a fundamental part of computer security. In this assignment, we wi
 ```sh
 $ ./project01 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
 password
+
+$ ./project01 15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225
+123456789
+
+$ ./project01 84f081273670181b0d00600d4972de62686806e8e98e14fd423dd3ad6f9e0f5b
+niners
+
+$ ./project01 ef94dedaa286a1e1c5aaf5e16d9b9809df55a80dd494791933c559fb1efd0ae0
+n!n3rs
+
+$ ./project01 ef60a458e0016857ade43406a7cfd256a904f8becd75c660b19ac72831f502d6
+niners1
 ```
 
 ## Rubric
