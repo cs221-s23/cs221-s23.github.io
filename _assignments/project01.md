@@ -15,15 +15,15 @@ Passwords are a fundamental part of computer security. In this assignment, we wi
 1. You will develop a C program which takes a hashed password (64 characters in length) on the command line.
 1. Your program will compare the given hash with:
     1. The hash of each of a list of 10,000 common passwords
-    1. The hash of each of those passwords after substituting common "l33t speak" transformations like 'e' to '3'
-    1. The hash of each of those passwords with a '1' added to the end
+    1. The hash of each of the 10,000 passwords after substituting common "l33t speak" transformations like 'e' to '3'
+    1. The hash of each of the 10,000 passwords with a '1' added to the end
 1. If the given hash matches any of those hashes, your program should print the clear-text password of the match.
 1. Your program must be called `project01` and must be built by a `Makefile` you provide.
 1. No credit will be given for projects which hard-code the hashes from the test cases and print the expected result without computing the result as described above.
 
 ## Given
 
-1. The GitHub Classroom Assignment assignment contains:
+1. When you accept the assignment using the link above, your repo will contain the following given code:
     1. `passwords.h` and `passwords.c` which respectively declare and define the list of 10,000 common passwords
     1. `sha256.h` and `sha256.c` which respectively declare and define the code to compute a SHA-256 hash digest
     1. `project01.c` which shows how to use the SHA-256 functions.
