@@ -19,7 +19,7 @@ In this assignment, we will implement [Dictionary Attack](https://en.wikipedia.o
     1. The hash of each of a list of 10,000 common passwords (10k tests)
     1. The hash of each of the 10,000 passwords after substituting common "l33t speak" transformations like 'e' to '3' (10k-l33t tests)
     1. The hash of each of the 10,000 passwords with a '1' added to the end (10k-plus1 tests)
-1. If the given hash matches any of those hashes, your program should print the clear-text password of the match.
+1. If the given hash matches any of those hashes, your program should print the clear-text password of the match. Otherwise, print "not found".
 1. Your program must be called `project01` and must be built by a `Makefile` you provide.
 1. No credit will be given for projects which hard-code the hashes from the test cases and print the expected result without computing the result as described above.
 
