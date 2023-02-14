@@ -11,13 +11,13 @@ layout: raw
 `Makefile` for `lab01`
 ```sh
 lab01: lab01.c
-    gcc -g -o lab01 lab01.c
+[tab]  gcc -g -o lab01 lab01.c
 ```
 
 The general form of a `Makefile` is
 ```sh
 target: dependencies
-    recipe to build target from dependencies
+[tab]   recipe to build target from dependencies
 ```
 ---
 If `lab01.c` has a newer file mod date than `lab01`
@@ -95,7 +95,10 @@ clean:
     rm -rf $(OBJS) $(PROG)
 ```
 
-You should never commit build products to the repo<!-- .element: class="fragment" -->
+You should never commit build products to the repo
+
+[download this Makefile](./Makefile)
+<!-- .element: class="fragment" -->
 ---
 ## Be Careful
 1. Recipes must be indented by a tab character, not spaces
