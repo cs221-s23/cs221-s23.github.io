@@ -17,17 +17,17 @@ In reality, hackers learn more (password, hash) pairs as they continue to attack
 1. You must provide a `Makefile` 
 1. Your program will build a sorted dictionary as follows:
     1. Use the following `struct entry` to store a (password, hash) pair. 
-    
-        ```c
-        struct entry {
-            char password[MAX_PASSWORD + 1];
-            char hash[DIG_STR_LEN + 1];
-            struct entry *next;
-        } entry;
+
+    ```c
+    struct entry {
+        char password[MAX_PASSWORD + 1];
+        char hash[DIG_STR_LEN + 1];
+        struct entry *next;
+    } entry;
         ```
     1. Passwords are stored in a file given in `argv[1]`, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. 
 
-    1. The linked list must be sorted in the **ascending order by the hash value**. 
+    1. The linked list must be sorted in the **ascending order by the hash value**. If the given (password, hash) pair exists in the linked list already, do not insert. 
 
     1. You should sort the list as you insert items. You must implement sorting yourself, i.e. do not use any sort functions provided in a library, e.g. C `qsort()`
 
@@ -55,7 +55,6 @@ $ cat dictionary.txt
 8e87f3b4d7e4a5bf207860f45f2a09f091928c549341bab786adaec8396e48aa,qw3r+y
 b6ad34b0b6b7e38f878a513b3f7927ebeb4cffb01aeb6d9fd9f9ad67fbc76517,qwerty1
 ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
-ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
 ```
 
 ## Rubric
@@ -73,4 +72,5 @@ ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
 
 ## Tips
 1. You should start with designing functions, and build and test one function at a time. It's too much code to write it all at once.
+1. You may want to copy the project02 test files in the autograder to your project02 directory and test one test case at a time. 
 1. A well-designed function tends to do one dedicated job. and is highly reusable. For example, finding the n<sup>th</sup> node in a linked list is reusable in any other program with a linked list.
