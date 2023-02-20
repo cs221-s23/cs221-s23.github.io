@@ -26,16 +26,16 @@ In reality, hackers learn more (password, hash) pairs as they continue to attack
     } entry;
     ```
 
-    1. Passwords are stored in a file given as a command-line argument, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. 
+    1. Passwords are stored in a file given in `argv[1]`, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. 
 
     1. The linked list must be sorted in the **ascending order by the hash value**. 
 
     1. You should sort the list as you insert items. You must implement sorting yourself, i.e. do not use any sort functions provided in a library, e.g. C `qsort()`
 
-    1. Store the sorted linked list in `dictionary.txt` file. The first line of this file should be the number of pairs in the file. The subsequent lines would contain one (hash, password) pair per line, with a comma in between. 
+    1. Store the sorted linked list in the file given by `argv[2]`. The first line of this file should be the number of pairs in the file. The subsequent lines would contain one (hash, password) pair per line, with a comma in between. 
 
 ## Given
-1. You will see a doubly-linked list demo and discuss Insertion Sort and Binary Search in class.
+1. You will see a single-linked list demo and discuss Insertion Sort in class.
 1. You may use any code from project01 and lab03. To copy files from one directory to another, see [shell basics](https://github.com/usfca-cs-tools/docs/blob/main/shell-basics.md).
 
 ## Example Output
@@ -45,7 +45,7 @@ $ cat passwords.txt
 password
 12345678
 qwerty
-$ ./project02 passwords.txt
+$ ./project02 passwords.txt dictionary.txt
 $ cat dictionary.txt
 9
 0b14d501a594442a01c6859541bcb3e8164d183d32937b851835442f69d5c94e,password1
