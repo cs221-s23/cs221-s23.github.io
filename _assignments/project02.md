@@ -58,12 +58,15 @@ ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
 ```
 
 ## Rubric
-1. 80 pts: correctness demonstrated by the `grade` script
-1. 10 pts: During the interactive grading, show the grader examples of defensive coding practice, such as:
+
+** Project02 requires interactive grading. Defensive coding and style will be graded during the interactive grading session. Not attending an interactive grading session will result in 0 for project02.**
+
+1. 80 pts (autograding): correctness demonstrated by the `grade` script
+1. 10 pts (defensive coding): Show the grader examples of defensive coding practice, such as:
     1. Checking for memory and I/O errors
     1. No unbounded memory copies
     1. No memory leaks
-1. 10 pts: Neatness, including (but not limited to) the items described in the [C Style Guide](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md)
+1. 10 pts (style): Neatness, including (but not limited to) the items described in the [C Style Guide](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md)
     1. Consistent naming and indentation
     1. Well-designed functions
     1. Helpful comments
