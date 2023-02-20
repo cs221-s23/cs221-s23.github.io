@@ -13,31 +13,26 @@ You will learn more about pointer manipulation and using struct by creating your
 In reality, hackers learn more (password, hash) pairs as they continue to attack, so the dictionary has to be expandable. Also, the hackers do not wish to do a linear search, i.e. scan the whole dictionary to find the corresponding password for the given hash, so the dictionary needs to be sorted so that the hackers can use a binary search. 
 
 ## Requirements
-1. You will write a C program and `Makefile` to help build a sorted dictionary file.
+1. You will write a C program called `project02` to help build a sorted dictionary file.
+1. You must provide a `Makefile` 
 1. Your program will build a sorted dictionary as follows:
     1. Use the following `struct entry` to store a (password, hash) pair. 
 
     ```c
-    typedef struct entry {
-        char* password;
-        char hash[DIG_STR_LEN];
+    struct entry {
+        char password[MAX_PASSWORD + 1];
+        char hash[DIG_STR_LEN + 1];
+        struct entry *next;
     } entry;
     ```
 
-    1. Passwords are stored in a file given as a command-line argument, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. For each node, use the following `struct node`. 
-
-    ```c
-    struct node {
-        entry e;
-        struct node *next;
-    } 
-    ```
+    1. Passwords are stored in a file given as a command-line argument, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. 
 
     1. The linked list must be sorted in the **ascending order by the hash value**. 
 
     1. You should sort the list as you insert items. You must implement sorting yourself, i.e. do not use any sort functions provided in a library, e.g. C `qsort()`
 
-    1. Store the sorted linked list in `dictionary` file. The first line of this file should be the number of pairs in the file. The subsequent lines would contain one (hash, password) pair per line, with a comma in between. 
+    1. Store the sorted linked list in `dictionary.txt` file. The first line of this file should be the number of pairs in the file. The subsequent lines would contain one (hash, password) pair per line, with a comma in between. 
 
 ## Given
 1. You will see a doubly-linked list demo and discuss Insertion Sort and Binary Search in class.
@@ -51,7 +46,7 @@ password
 12345678
 qwerty
 $ ./project02 passwords.txt
-$ cat dictionary
+$ cat dictionary.txt
 9
 0b14d501a594442a01c6859541bcb3e8164d183d32937b851835442f69d5c94e,password1
 154c4c511cbb166a317c247a839e46cac6d9208af5b015e1867a84cd9a56007b,123456781
@@ -70,7 +65,7 @@ ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
     1. Checking for memory and I/O errors
     1. No unbounded memory copies
     1. No memory leaks
-1. 10 pts: Neatness, including (but not limited to):
+1. 10 pts: Neatness, including (but not limited to) the items described in the [C Style Guide](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md)
     1. Consistent naming and indentation
     1. Well-designed functions
     1. Helpful comments
