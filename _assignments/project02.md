@@ -59,7 +59,7 @@ ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
 
 ## Rubric
 1. 80 pts: correctness demonstrated by the `grade` script
-1. 10 pts: Show the grader examples of defensive coding practice, such as:
+1. 10 pts: During the interactive grading, show the grader examples of defensive coding practice, such as:
     1. Checking for memory and I/O errors
     1. No unbounded memory copies
     1. No memory leaks
@@ -68,7 +68,7 @@ ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f,12345678
     1. Well-designed functions
     1. Helpful comments
     1. No dead (commented-out) code or unnecessarily complex code
-    1. No build products in the repo
+    1. No build products or output dictionary files in the repo
 
 ## Tips
 1. You should start with designing functions, and build and test one function at a time. It's too much code to write it all at once.
