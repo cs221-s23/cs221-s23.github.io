@@ -18,12 +18,12 @@ In reality, hackers learn more (password, hash) pairs as they continue to attack
 1. Your program will build a sorted dictionary as follows:
     1. Use the following `struct entry` to store a (password, hash) pair. 
 
-    ```c
-    struct entry {
-        char password[MAX_PASSWORD + 1];
-        char hash[DIG_STR_LEN + 1];
-        struct entry *next;
-    } entry;
+        ```c
+        struct entry {
+            char password[MAX_PASSWORD + 1];
+            char hash[DIG_STR_LEN + 1];
+            struct entry *next;
+        } entry;
         ```
     1. Passwords are stored in a file given in `argv[1]`, and the number of passwords in this file is unknown. In the password file, one password is stored in one line. For every password in the file, create (password, its sha256 hash), (l33t version of the password, its sha256 hash), (plus1 version of the password, its sha256 hash) pairs and add these 3 pairs as 3 nodes to a linked list. 
 
