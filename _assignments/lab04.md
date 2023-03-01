@@ -12,11 +12,11 @@ github_url: https://classroom.github.com/a/jP7xMMqU
 1. Your program will include three functions declared in `lab04.h`. 
     1. `init_board`: accept input from `char* argv[]`specifying Row and Column inputs to the Tic-Tac-Toe board. 0 0 is the upper left and 2 2 is the lower right.
     1. `print_board`: print the content of the 3x3 board.
-    1. `check_board`: win and draw patterns on the board.
+    1. `check_board`: win and draw patterns on the board. return 1 if X wins, -1 if O wins, 0 if draw.
 
 ## Given
 
-1. `lab04.h` includes the function declarations, and `test.c` includes the `main` function that runs test cases. Do NOT create another `main` function in your code. 
+1. `lab04.h` includes the `board_t` type definition and function declarations, and `test.c` includes the `main` function that runs test cases. Do NOT create another `main` function in your code. 
 1. In lecture we will discuss the basics of the game, including alternating turns, making legal moves, and detecting a win.
 1. We will learn several new C language features, including two-dimensional arrays.
 
