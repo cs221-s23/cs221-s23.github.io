@@ -139,7 +139,7 @@ Given a sequence of tokens in a `scan_table_st`, we will recursively construct a
 - Scan the input expression string into tokens
 - Parse the tokens into a tree of `parse_node_st`
 - Walk the tree to generate indented output as shown
-- Your parser will to base conversion from `TK_BINLIT` and `TK_HEXLIT` into an `int` for `intval` operands
+- Your parser will to base conversion from `TK_BINLIT` and `TK_HEXLIT` into an `int` for `intval` operands without using C `atoi()` or `sscanf()`
 1. `autograder` test cases will be provided
 
 ## Example Output
