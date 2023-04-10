@@ -87,6 +87,7 @@ github_url: https://classroom.github.com/a/UlBdpqm1
       IdentityFile ~/.ssh/id_ed25519
     Host stargate
       HostName stargate.cs.usfca.edu
+    # HostName 138.202.168.64
       ForwardAgent yes
       User your_usf_login
       AddKeysToAgent yes
