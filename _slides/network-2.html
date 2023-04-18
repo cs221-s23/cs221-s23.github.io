@@ -16,6 +16,7 @@ layout: raw
     - Write data
     - Read data on ready sockets
 - Deallocate dynamic resources
+- In a [diagram](./tcp_architecture.jpg)
 ---
 ## Lookup a hostname
 
@@ -91,3 +92,4 @@ freeaddrinfo(results);
 1. Clients: lookup, socket, connect, read/write
 1. Servers: socket, bind, recvfrom (UDP)
 1. Check errors. Use `perror()`
+
