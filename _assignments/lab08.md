@@ -53,7 +53,53 @@ In this assignment you will extend the PING/PONG server to implement
     </html>
     ```
 
+## Example Output
 
+```sh
+lab08@vlab30$ ./lab08 -p 9000 &
+[1] 14205
+lab08@vlab30$ telnet localhost 9000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET / HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Length: 59
+Content-Type: text/plain
+
+<!DOCTYPE html>
+<html>
+<body>
+Hello CS 221
+</body>
+</html>
+
+
+Connection closed by foreign host.
+lab08@vlab30$ telnet localhost 9000
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+GET /wrong.html HTTP/1.1
+
+HTTP/1.1 404 Not Found
+Content-Length: 55
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<body>Not Found
+</body>
+</html>
+
+
+Connection closed by foreign host.
+```
 
 ## Rubric
 
