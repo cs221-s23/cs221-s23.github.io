@@ -107,3 +107,6 @@ Connection closed by foreign host.
     1. 49 pts for returning the default index page given above
     1. 49 pts for returning the not-found page given above
     1. 1 pt each for successfully starting and stopping the server
+1. Remember to include `port.txt` like we did for lab07
+1. Please don't commit the `*.tmp` or `*.html` files that autograder creates. 
+You may wish to create a `.gitignore` file
