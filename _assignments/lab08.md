@@ -15,7 +15,7 @@ In this assignment you will extend the PING/PONG server to implement
 ## Implementation Notes
 
 ### How to use poll()
-1. The `poll()` takes an array of `struct pollfd` elements
+1. The `poll()` takes an array of `struct pollfd` elements (see `man poll`)
 1. Each `struct pollfd` wraps an `int` file descriptor, and includes some flags
 1. We want to know when there is data to read on the file descriptor, so we set the pollfd's `events` field to `POLLIN`
 1. When `poll()` returns, it tells us how many of the `struct pollfd` elements have input we can read
@@ -58,6 +58,6 @@ In this assignment you will extend the PING/PONG server to implement
 ## Rubric
 
 1. We will use autograder to test lab08 as follows:
-    1. 48 pts for returning the default index page given above
-    1. 48 pts for returning the not-found page given above
+    1. 49 pts for returning the default index page given above
+    1. 49 pts for returning the not-found page given above
     1. 1 pt each for successfully starting and stopping the server
