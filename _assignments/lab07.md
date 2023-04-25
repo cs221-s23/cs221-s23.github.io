@@ -58,6 +58,35 @@ You can stop your server using the `kill` command with its `pid`
 user@vlab31:lab07 $ kill 14205
 ```
 
+## Implementation Notes
+
+### Starting your server
+
+1. When your server starts, it should use `getaddrinfo()` to get a list of possible socket parameters from the operating system
+	1. You should loop over the linked list of results using `ai_next`, trying 
+		```
+		hints.ai_family = AF_INET;
+		hints.ai_socktype = SOCK_STREAM;
+		hints.ai_flags = AI_PASSIVE
+		hints.ai_protocol = IPPROTO_TCP
+		```
+	1. For each result, you should call `socket()` with the `ai_family`, `ai_socktype`, and `ai_protocol` for the result. If `socket()` returns -1, keep looking through the results list.
+1. Once you have a valid (not -1) socket, you should configure the socket for a server
+	1. `setsockopt(fd, SOL_SOCKET, SO_REUSEADDR...)` tells the operating system that it's ok for more than one server to accept connections on this IP address 
+	1. `ioctl(fd, FIONBIO...)` tells the operating system that we will use "non-blocking I/O" 
+1. Then we can use `bind()` to connect the network socket with the port and protocol for the matching result (from `getaddrinfo()`)
+1. Finally we can use `listen()` to tell the operating system that any connection requests should come through the port we just bound.
+
+### Connection Requests
+
+1. When clients try to connect to our server, the socket we listened on will be readable
+1. When that happens, we will call `accept()` to create a new socket for the client to talk to. Therefore, we have only one listener socket, but a new socket for each accepted connection.
+
+## Handling Traffic
+
+1. When a client sends network traffic to our server, we can `read()` (or `recv()`) the readable socket.
+1. We can `send()` our response to the client and (for this lab) `close()` the connection
+
 ## Debugging Tips 
 
 1. When debugging your server, you may run it in the background (using `&`) or in the foreground if you want to run it in `gdb` or watch `printf()` output

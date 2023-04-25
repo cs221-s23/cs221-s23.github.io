@@ -57,5 +57,7 @@ In this assignment you will extend the PING/PONG server to implement
 
 ## Rubric
 
-1. 50 pts for using `poll()` correctly (graded manually)
-1. 50 pts for correctly interpreting an HTTP GET method (graded by autograder)
+1. We will use autograder to test lab08 as follows:
+    1. 48 pts for returning the default index page given above
+    1. 48 pts for returning the not-found page given above
+    1. 1 pt each for successfully starting and stopping the server
