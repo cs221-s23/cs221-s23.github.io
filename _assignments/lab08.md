@@ -15,12 +15,19 @@ In this assignment you will extend the PING/PONG server to implement
 ## Implementation Notes
 
 ### How to use poll()
-1. The `poll()` takes an array of `struct pollfd` elements (see `man poll`)
-1. Each `struct pollfd` wraps an `int` file descriptor, and includes some flags
-1. We want to know when there is data to read on the file descriptor, so we set the pollfd's `events` field to `POLLIN`
-1. When `poll()` returns, it tells us how many of the `struct pollfd` elements have input we can read
-1. We loop over all of the pollfds, looking for `(revents & POLLIN) != 0`
-1. The file descriptor in that pollfd can be read with `recv()`
+1. The `poll()` takes an array of `struct pollfd` elements 
+```sh
+           struct pollfd {
+               int   fd;         /* file descriptor */
+               short events;     /* requested events */
+               short revents;    /* returned events */
+           };
+```
+1. Each `struct pollfd` wraps an `int` file descriptor, and includes some [flags](https://sites.uclouvain.be/SystInfo/usr/include/bits/poll.h.html).
+1. We want to know when there is data to read on the file descriptor, so we set the `pollfd`'s `events` field to `POLLIN`.
+1. When `poll()` returns, it tells us how many of the `struct pollfd` elements have input we can read.
+1. We loop over all of the `pollfd`s in the array, looking for `(revents & POLLIN) != 0`
+1. The file descriptor in that `pollfd` can be read with `recv()`. The `flags` is set to be 0 when no options are necessary.
 
 
 ### How to parse HTTP GET requests
