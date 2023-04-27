@@ -33,7 +33,7 @@ In this assignment you will extend the PING/PONG server to implement
 ### How to parse HTTP GET requests
 1. Since HTTP requests are terminated by a `'\n'` you should `recv()` from a readable file descriptor into a buffer until you encounter a `'\n'`
 1. The HTTP `Request-Line` contains a "method", a Uniform Resource Identifier (URI) and the protocol version, e.g. `GET / HTTP/1.1`. You should parse the request line into those pieces. 
-1. If the request line contains a `GET` for `/` you should write a successful response into the file descriptor. For example: 
+1. If the request line contains a `GET` for `/` you should write a successful response into the file descriptor. Here is an example successful response:
     ```
     HTTP/1.1 200 OK
     Content-Type: text/html
@@ -46,7 +46,7 @@ In this assignment you will extend the PING/PONG server to implement
       </body>
     </html>
     ```
-1. If the request contains a method other than `GET` or a URI other then `/` you should write a error response into the file descriptor. For example:
+1. If the request contains a method other than `GET` or a URI other then `/` you should write a error response into the file descriptor. Here is an example error response for requesting a file that doesn't exist on the server (404 Not Found).
     ```
     HTTP/1.1 404 Not Found
     Content-Type: text/html
@@ -59,6 +59,7 @@ In this assignment you will extend the PING/PONG server to implement
       </body>
     </html>
     ```
+1. 200 and 404 are HTTP response status codes. Here is [the full list](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
 
 ## Example Output
 
