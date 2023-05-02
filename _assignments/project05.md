@@ -41,7 +41,15 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 	```sh
 	mv cs221.cs.usfca.edu www
 	```
-1. You may use `ftell()` function to get the size of the file for the `Content-Length: ` part. 
+1. You may use `ftell()` function to get the size of the file for the `Content-Length: ` part. Once the stream reaches the end of the file, you can use `rewind()` or `fseek()`. The following commands set the file position indicator for the stream pointed to by `stream` to the beginning of the file. 
+
+```sh
+    (void) rewind(stream)
+```
+
+```sh
+    (void) fseek(stream, 0L, SEEK_SET)
+```
 
 1. You may use `strsep()` function to get the directory and file names from the URL. 
 
