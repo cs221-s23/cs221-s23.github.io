@@ -63,21 +63,25 @@ In this assignment you will extend the PING/PONG server to implement
 
 ## Example Output
 
+The autograder test cases for lab08 use `wget` as an http client, rather than `telnet` or `ncat`
+
 ```sh
-lab08@vlab30$ ./lab08 -p 9000 &
+lab08@vlab30$ ./lab08 -p 9001 &
 [1] 14205
-lab08@vlab30$ telnet localhost 9000
-Trying ::1...
-telnet: connect to address ::1: Connection refused
-Trying 127.0.0.1...
-Connected to localhost.
-Escape character is '^]'.
-GET / HTTP/1.1
+phpeterson@vlab00:lab08 $ wget localhost:9001/ -O index.html
+--2023-04-27 20:45:29--  http://localhost:9001/
+Resolving localhost (localhost)... ::1, 127.0.0.1
+Connecting to localhost (localhost)|::1|:9001... failed: Connection refused.
+Connecting to localhost (localhost)|127.0.0.1|:9001... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 59 [text/plain]
+Saving to: ‘index.html’
 
-HTTP/1.1 200 OK
-Content-Length: 59
-Content-Type: text/plain
+index.html          100%[===================>]      59  --.-KB/s    in 0s
 
+2023-04-27 20:45:29 (13.9 MB/s) - ‘index.html’ saved [59/59]
+
+phpeterson@vlab00:lab08 $ cat index.html
 <!DOCTYPE html>
 <html>
 <body>
@@ -85,28 +89,17 @@ Hello CS 221
 </body>
 </html>
 
-
 Connection closed by foreign host.
-lab08@vlab30$ telnet localhost 9000
-Trying ::1...
-telnet: connect to address ::1: Connection refused
-Trying 127.0.0.1...
-Connected to localhost.
-Escape character is '^]'.
-GET /wrong.html HTTP/1.1
 
-HTTP/1.1 404 Not Found
-Content-Length: 55
-Content-Type: text/html
-
-<!DOCTYPE html>
-<html>
-<body>Not Found
-</body>
-</html>
+phpeterson@vlab00:lab08 $ wget localhost:9001/wrong -O wrong.html
+--2023-04-27 20:46:56--  http://localhost:9001/wrong
+Resolving localhost (localhost)... ::1, 127.0.0.1
+Connecting to localhost (localhost)|::1|:9001... failed: Connection refused.
+Connecting to localhost (localhost)|127.0.0.1|:9001... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-04-27 20:46:56 ERROR 404: Not Found.
 
 
-Connection closed by foreign host.
 ```
 
 ## Rubric
@@ -118,3 +111,8 @@ Connection closed by foreign host.
 1. Remember to include `port.txt` like we did for lab07
 1. Please don't commit the `*.tmp` or `*.html` files that autograder creates. 
 You may wish to create a `.gitignore` file
+1. Autograder expected output
+    ```
+    phpeterson@vlab00:lab08 $ grade test -p lab08
+    . start(1/1) index(49/49) not-found(49/49) stop(1/1) 100/100
+    ```
