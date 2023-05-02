@@ -23,7 +23,6 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 1. You need to set up SSH port forwarding. If you were using port 9000 (use the same port number you used for lab07 and lab08) on `vlab31`, then run the following command so that your web browser's connection to `localhost` on port 9000 will be forwarded to `vlab31` on port 9000.
 
 	```sh
-
 	ssh -L 9000:vlab31:9000 stargate
 	```
 
