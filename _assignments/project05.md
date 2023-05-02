@@ -26,7 +26,7 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 	ssh -L 9000:vlab31:9000 stargate
 	``
 
-1. Go to localhost:9000 on your web browser. Your HTTP server should respond. For the content of your server, use the content of CS221 website ![as shown below]({{ img_base }}/project05_screenshot.png).
+1. Go to localhost:9000 on your web browser. Your HTTP server on `vlab31` should respond. For the content of your server, use the content of CS221 website ![as shown below]({{ img_base }}/project05_screenshot.png).
 
 1. Click on the links - the contents must match what you would see on the official CS221 website. 
 
