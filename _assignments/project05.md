@@ -22,9 +22,10 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 
 1. You need to set up SSH port forwarding. If you were using port 9000 (use the same port number you used for lab07 and lab08) on `vlab31`, then run the following command so that your web browser's connection to `localhost` on port 9000 will be forwarded to `vlab31` on port 9000.
 
-	``sh
+	```sh
+
 	ssh -L 9000:vlab31:9000 stargate
-	``
+	```
 
 1. Go to localhost:9000 on your web browser. Your HTTP server on `vlab31` should respond. For the content of your server, use the content of CS221 website ![as shown below]({{ img_base }}/project05_screenshot.png).
 
@@ -34,13 +35,13 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 
 1. Download the content of cs221 course website to serve from your own web server. To scrape the site, run
 
-	``sh
+	```sh
 	wget --recursive --page-requisites --convert-links cs221.cs.usfca.edu
-	``
+	```
 1. If you wish to store the content in `www` directory, move the contents as follows.
-``sh
-mv cs221.cs.usfca.edu www
-``
+	```sh
+	mv cs221.cs.usfca.edu www
+	```
 1. You may use `ftell()` function to get the size of the file for the `Content-Length: ` part. 
 
 1. You may use `strsep()` function to get the directory and file names from the URL. 
