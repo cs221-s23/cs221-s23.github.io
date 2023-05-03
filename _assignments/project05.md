@@ -1,6 +1,6 @@
 ---
 layout: assignment
-due: 2023-05-08 11:59:59 -0800
+due: 2023-05-08 23:59:59 -0800
 permalink: assignments/project05.html
 title: Project05 - HTTP Server
 github_url: https://classroom.github.com/a/8_ioS-5m
