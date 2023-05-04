@@ -68,6 +68,8 @@ github_url: https://classroom.github.com/a/8_ioS-5m
 	1. Everyone will submit a google form with the scores. TAs will review for an error in grading and enter the scores in Canvas.
 	1. An absence during the peer-grading session will result in 0 for project05. If you have a documented excuse, please arrange a make-up grading session with the instructor by May 4th. (The make-up session doesn't have to happen by May 4th. You just need to schedule one by then.) Failure to schedule a make-up sesion by May 4th will result in 0.
 	1. Note that there is no resubmission for Project05 style. The peer-grading session happens on the last class day, so there is no time for resubmission and regrading. 
+    1. Grading meetings must use the vlab terminal environment, not local IDEs on your laptop or web pages on github.com
+    1. To ensure that everyone has the same deadline, grading meetings will start with `grade clone -p project05 -s your_github_id -d 2023-05-11` to get a clean repo
 
 ## Rubric
 
